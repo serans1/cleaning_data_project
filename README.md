@@ -13,18 +13,27 @@ Here are the data for the project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ##scripts details 
+
 The script uses plyr and dplyr 
 The high level flow:
 1. read the training and test data 
+
 2. add the subject id and features into the read data
+
 3. merge them into a single data set and sort by id , save result 
+
 4. update the lables into human readable form
+
 5. grep all the requested columns (mean/std)
+
 6. use dplyr to mean by group and id and adjust the colnames with mean lable 
+
 7. save result 
 
 output is two files:
+
 1. mean_std.csv - the merged data contains only the means and std fields.
+
 2. meas.csv - the mean per id and activity data 
 
 More info can by found in the inline documentation of the script run_analysis.R
