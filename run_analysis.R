@@ -37,6 +37,6 @@ means<-mean_std %>% group_by(id,activity) %>% summarise_each(funs(mean))
 # update names
 colnames(means)[-c(1:2)] <- paste(colnames(means)[-c(1:2)], "_mean", sep="")
 #save the means data 
-write.csv(means, file = "means.csv")
+write.table(means, file = "means.csv",row.names = FALSE)
 
 
